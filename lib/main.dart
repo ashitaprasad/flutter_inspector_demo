@@ -10,15 +10,17 @@ class Emoji extends StatelessWidget {
   final String itemText;
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Text(
-        icon,
-        style: const TextStyle(
-          fontSize: 30.0,
+    return Column(
+      children: [
+        Text(
+          icon,
+          style: const TextStyle(
+            fontSize: 30.0,
+          ),
         ),
-      ),
-      Text(itemText),
-    ]);
+        Text(itemText),
+      ],
+    );
   }
 }
 
@@ -51,7 +53,6 @@ class MainApp extends StatelessWidget {
 
               //Problem #2
               Row(
-                //shrinkWrap: true,
                 children: const [
                   Emoji('😀', 'Good'),
                   Emoji('😐', 'Average'),
@@ -68,6 +69,7 @@ class MainApp extends StatelessWidget {
                 ],
               ),
 
+              // Problem #4
               Row(
                 children: [
                   ElevatedButton(
