@@ -12,12 +12,7 @@ class Emoji extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
-          icon,
-          style: const TextStyle(
-            fontSize: 30.0,
-          ),
-        ),
+        Text(icon, style: const TextStyle(fontSize: 30.0)),
         Text(itemText),
       ],
     );
@@ -32,28 +27,24 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Inspector Demo',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter Inspector Demo'),
-        ),
+        appBar: AppBar(title: const Text('Flutter Inspector Demo')),
         body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
               // Problem #1
-              Row(
-                children: const [
+              const Row(
+                children: [
                   Text(
                     'Please provide your valuable feedback by sharing your experience with us!',
-                    style: TextStyle(
-                      fontSize: 18.0,
-                    ),
+                    style: TextStyle(fontSize: 18.0),
                   ),
                 ],
               ),
 
               //Problem #2
-              Row(
-                children: const [
+              const Row(
+                children: [
                   Emoji('😀', 'Good'),
                   Emoji('😐', 'Average'),
                   Emoji('🙁', 'Bad'),
@@ -61,13 +52,7 @@ class MainApp extends StatelessWidget {
               ),
 
               // Problem #3
-              Row(
-                children: const [
-                  Divider(
-                    color: Colors.black,
-                  ),
-                ],
-              ),
+              const Row(children: [Divider(color: Colors.black)]),
 
               // Problem #4
               Row(
@@ -76,9 +61,7 @@ class MainApp extends StatelessWidget {
                     onPressed: () {
                       debugPrint('Submit button pressed.');
                     },
-                    child: const Text(
-                      'Submit',
-                    ),
+                    child: const Text('Submit'),
                   ),
                 ],
               ),
